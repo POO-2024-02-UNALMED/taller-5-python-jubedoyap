@@ -11,7 +11,6 @@ class Reptil(Animal):
         super.__init__(nombre, edad, habitat, genero)
         self._colorEscamas = colorEscamas
         self._largoCola = largoCola
-        Reptil._listado.append(Reptil(nombre, edad, habitat, genero, colorEscamas, largoCola)) # Pilas con el bucle infinito
 
     def getColorEscamas(self):
         return self._colorEscamas

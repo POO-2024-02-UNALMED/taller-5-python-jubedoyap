@@ -14,10 +14,10 @@ class Ave(Animal):
         super().setGenero(genero)
         self._colorPlumas = colorPlumas
     
-    def getPlumas(self):
+    def getColorPlumas(self):
         return self._colorPlumas
     
-    def setPlumas(self, colorPlumas):
+    def setColorPlumas(self, colorPlumas):
         self._colorPlumas = colorPlumas
     
     #Método movimiento()
@@ -41,6 +41,7 @@ class Ave(Animal):
         Ave.halcones += 1
 
     #método crearAguila
+    @classmethod
     def crearAguila(cls, nombre, edad, genero):
         Ave._listado.append(Ave(nombre, edad, "montanas", genero, "blanco y amarillo"))
         Ave.aguilas += 1

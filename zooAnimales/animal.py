@@ -56,7 +56,7 @@ class Animal():
                 "\nPeces : ", Pez.cantidadPeces(), "\nAnfibios : ", Anfibio.cantidadAnfibios())
     
     #Método toString()
-    def __str__(self):
+    def toString(self):
         cadena = ""
         if (self.getZona() == None):
             cadena = "Mi nombre es ", self.getNombre(), " tengo una edad de ", self.getEdad(), ", habito en ", self.getHabitat(), " y mi genero es ", self.getGenero()

@@ -67,7 +67,7 @@ class Animal():
         else:
             cadena = "Mi nombre es " + self.getNombre() + ", tengo una edad de " + str(self.getEdad()) + ", habito en " + self.getHabitat() + " y mi genero es " + self.getGenero() + \
                      ", la zona en la que me ubico es " + str(self.getZona()) + ", en el " + str(self.getZona().getZoo())
-    
+        return cadena
     #Método movimiento()
     @classmethod
     def movimiento(cls):

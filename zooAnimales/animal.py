@@ -63,11 +63,10 @@ class Animal():
     def toString(self):
         cadena = ""
         if (self.getZona() is None):
-            cadena = "Mi nombre es ", self.getNombre(), ", tengo una edad de ", str(self.getEdad()), ", habito en ", self.getHabitat(), " y mi genero es ", self.getGenero()
+            cadena = "Mi nombre es " + self.getNombre() + ", tengo una edad de " + str(self.getEdad()) + ", habito en " + self.getHabitat() + " y mi genero es " + self.getGenero()
         else:
-            cadena = ("Mi nombre es ", self.getNombre(), ", tengo una edad de ", str(self.getEdad()), ", habito en ", self.getHabitat(), " y mi genero es ", self.getGenero(),
-                      ", la zona en la que me ubico es ", self.getZona(), ", en el ", self.getZona().getZoo())
-        return cadena
+            cadena = "Mi nombre es " + self.getNombre() + ", tengo una edad de " + str(self.getEdad()) + ", habito en " + self.getHabitat() + " y mi genero es " + self.getGenero() + \
+                     ", la zona en la que me ubico es " + str(self.getZona()) + ", en el " + str(self.getZona().getZoo())
     
     #Método movimiento()
     @classmethod

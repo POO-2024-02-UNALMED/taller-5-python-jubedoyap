@@ -31,6 +31,6 @@ class Zoologico():
 
     def cantidadTotalAnimales(self):
         cantidadTotalAnimales = 0
-        for i in range(len(self._zonas)):
-            cantidadTotalAnimales += self.getZonas()[i].cantidadAnimales()
+        for zona in self._zonas:
+            cantidadTotalAnimales += zona.cantidadAnimales()
         return cantidadTotalAnimales

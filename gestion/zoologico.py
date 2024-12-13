@@ -20,7 +20,7 @@ class Zoologico():
     def agregarZonas(self, nuevaZona):
         self._zonas.append(nuevaZona)
 
-    def getZona(self):
+    def getZonas(self):
         return self._zonas
     
 

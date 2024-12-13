@@ -52,16 +52,17 @@ class Animal():
         from .reptil import Reptil
         from .pez import Pez
         from .anfibio import Anfibio
-        return "Mamiferos: " + str(Mamifero.cantidadMamiferos()) + "\n" + \
-           "Aves: " + str(Ave.cantidadAves()) + "\n" + \
-           "Reptiles: " + str(Reptil.cantidadReptiles()) + "\n" + \
-           "Peces: " + str(Pez.cantidadPeces()) + "\n" + \
-           "Anfibios: " + str(Anfibio.cantidadAnfibios())
+        return "Mamiferos : " + str(Mamifero.cantidadMamiferos()) + "\n" + \
+           "Aves : " + str(Ave.cantidadAves()) + "\n" + \
+           "Reptiles : " + str(Reptil.cantidadReptiles()) + "\n" + \
+           "Peces : " + str(Pez.cantidadPeces()) + "\n" + \
+           "Anfibios : " + str(Anfibio.cantidadAnfibios())
     
-    #Método toString()
+    
+    #Método toString()  
     def toString(self):
         cadena = ""
-        if (self.getZona() == None):
+        if (self.getZona() is None):
             cadena = "Mi nombre es ", self.getNombre(), " tengo una edad de ", self.getEdad(), ", habito en ", self.getHabitat(), " y mi genero es ", self.getGenero()
         else:
             cadena = ("Mi nombre es ", self.getNombre(), " tengo una edad de ", self.getEdad(), ", habito en ", self.getHabitat(), " y mi genero es ", self.getGenero(),

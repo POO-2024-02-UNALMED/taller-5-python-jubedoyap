@@ -17,7 +17,7 @@ class Zoologico():
     def setUbicacion(self, nuevaUbicacion):
         self._ubicacion = nuevaUbicacion
 
-    def agregarZona(self, nuevaZona):
+    def agregarZonas(self, nuevaZona):
         self._zonas.append(nuevaZona)
 
     def getZona(self):

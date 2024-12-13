@@ -6,12 +6,13 @@ class Pez(Animal):
     bacalaos = 0
     _listado = []
     
-    def __init__(self, nombre, edad, habitat, genero, colorEscamas, cantidadAletas):
+    def __init__(self, nombre, edad, habitat, genero, colorEscamas, cantidadAletas, zona = None):
 
         super().setNombre(nombre)
         super().setEdad(edad)
         super().setHabitat(habitat)
         super().setGenero(genero)
+        super().setZona(zona)
         self._colorEscamas = colorEscamas
         self._cantidadAletas = cantidadAletas
     
@@ -44,13 +45,13 @@ class Pez(Animal):
     
     #método crearSalmon()
     @classmethod
-    def crearSalmon(cls, nombre, edad, genero):
-        Pez._listado.append(Pez(nombre, edad, "ocenao", genero, "rojo", 6))
+    def crearSalmon(cls, nombre, edad, genero, zona = None):
+        Pez._listado.append(Pez(nombre, edad, "ocenao", genero, "rojo", 6, zona))
         Pez.salmones += 1
     
     #método crearBacalao()
     @classmethod
-    def crearBacalao(cls, nombre, edad, genero):
-        Pez._listado.append(Pez(nombre, edad, "ocenao", genero, "gris", 6))
+    def crearBacalao(cls, nombre, edad, genero, zona = None):
+        Pez._listado.append(Pez(nombre, edad, "ocenao", genero, "gris", 6, zona))
         Pez.bacalaos += 1
     

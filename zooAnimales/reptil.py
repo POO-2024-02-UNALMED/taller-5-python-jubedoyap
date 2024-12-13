@@ -6,12 +6,13 @@ class Reptil(Animal):
     serpientes = 0
     _listado = []
     
-    def __init__(self, nombre, edad, habitat, genero, colorEscamas, largoCola):
+    def __init__(self, nombre, edad, habitat, genero, colorEscamas, largoCola, zona = None):
 
         super().setNombre(nombre)
         super().setEdad(edad)
         super().setHabitat(habitat)
         super().setGenero(genero)
+        super().setZona(zona)
         self._colorEscamas = colorEscamas
         self._largoCola = largoCola
 
@@ -44,12 +45,12 @@ class Reptil(Animal):
     
     #método crearIguana()
     @classmethod
-    def crearIguana(cls,nombre, edad, genero):
-        Reptil._listado.append(Reptil(nombre, edad, "humedal", genero, "verde", 3))
+    def crearIguana(cls,nombre, edad, genero, zona = None):
+        Reptil._listado.append(Reptil(nombre, edad, "humedal", genero, "verde", 3, zona))
         Reptil.iguanas += 1
 
     #método crearSerpiente()
     @classmethod
-    def crearSerpiente(cls,nombre, edad, genero):
-        Reptil._listado.append(Reptil(nombre, edad, "jungla", genero, "blanco", 1))
+    def crearSerpiente(cls,nombre, edad, genero, zona = None):
+        Reptil._listado.append(Reptil(nombre, edad, "jungla", genero, "blanco", 1, zona))
         Reptil.serpientes += 1

@@ -8,7 +8,10 @@ class Mamifero(Animal):
     
     def __init__(self, nombre, edad, habitat, genero, pelaje, patas):
         
-        super.__init__(nombre, edad, habitat, genero)
+        super().setNombre(nombre)
+        super().setEdad(edad)
+        super().setHabitat(habitat)
+        super().set(genero)
         self._pelaje = pelaje
         self._patas = patas
     

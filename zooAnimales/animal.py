@@ -1,20 +1,13 @@
-from gestion.zona import Zona
-from zooAnimales.mamifero import Mamifero
-from zooAnimales.ave import Ave
-from zooAnimales.reptil import Reptil
-from zooAnimales.pez import Pez
-from zooAnimales.anfibio import Anfibio
-
 class Animal():
 
     _totalAnimales = 0
     
-    def __init__(self, nombre, edad, habitat, genero):
+    def __init__(self, nombre, edad, habitat, genero, zona = None):
         self._nombre = nombre
         self._edad = edad
         self._habitat = habitat
         self._genero = genero
-        self._zona = []
+        self._zona = zona
         Animal._totalAnimales += 1
 
     def getNombre(self):
@@ -42,21 +35,30 @@ class Animal():
         self._genero = nuevoGenero
 
     def setZona(self, nuevaZona):
-        self._zona[0] = nuevaZona
+        self._zona = nuevaZona
     
     def getZona(self):
         return self._zona
     
+    @classmethod
+    def getTotalAnimales(cls):
+        return cls._totalAnimales
+    
     #Método total por tipo
     @classmethod
     def totalPorTipo(cls):
+        from .mamifero import Mamifero
+        from .ave import Ave
+        from .reptil import Reptil
+        from .pez import Pez
+        from .anfibio import Anfibio
         return ("Mamiferos : ", Mamifero.cantidadMamiferos(), "\nAves : ", Ave.cantidadAves(), "\nReptiles : ", Reptil.cantidadReptiles(), 
                 "\nPeces : ", Pez.cantidadPeces(), "\nAnfibios : ", Anfibio.cantidadAnfibios())
     
     #Método toString()
     def __str__(self):
         cadena = ""
-        if (self.getZona()[0] == None):
+        if (self.getZona() == None):
             cadena = "Mi nombre es ", self.getNombre(), " tengo una edad de ", self.getEdad(), ", habito en ", self.getHabitat(), " y mi genero es ", self.getGenero()
         else:
             cadena = ("Mi nombre es ", self.getNombre(), " tengo una edad de ", self.getEdad(), ", habito en ", self.getHabitat(), " y mi genero es ", self.getGenero(),

@@ -8,7 +8,10 @@ class Pez(Animal):
     
     def __init__(self, nombre, edad, habitat, genero, colorEscamas, cantidadAletas):
 
-        super.__init__(nombre, edad, habitat, genero)
+        super().setNombre(nombre)
+        super().setEdad(edad)
+        super().setHabitat(habitat)
+        super().set(genero)
         self._colorEscamas = colorEscamas
         self._cantidadAletas = cantidadAletas
     

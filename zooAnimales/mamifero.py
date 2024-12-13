@@ -11,7 +11,7 @@ class Mamifero(Animal):
         super().setNombre(nombre)
         super().setEdad(edad)
         super().setHabitat(habitat)
-        super().set(genero)
+        super().setGenero(genero)
         self._pelaje = pelaje
         self._patas = patas
     

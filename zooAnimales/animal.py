@@ -52,8 +52,11 @@ class Animal():
         from .reptil import Reptil
         from .pez import Pez
         from .anfibio import Anfibio
-        return ("Mamiferos : ", Mamifero.cantidadMamiferos(), "\nAves : ", Ave.cantidadAves(), "\nReptiles : ", Reptil.cantidadReptiles(), 
-                "\nPeces : ", Pez.cantidadPeces(), "\nAnfibios : ", Anfibio.cantidadAnfibios())
+        return "Mamiferos: " + str(Mamifero.cantidadMamiferos()) + "\n" + \
+           "Aves: " + str(Ave.cantidadAves()) + "\n" + \
+           "Reptiles: " + str(Reptil.cantidadReptiles()) + "\n" + \
+           "Peces: " + str(Pez.cantidadPeces()) + "\n" + \
+           "Anfibios: " + str(Anfibio.cantidadAnfibios())
     
     #Método toString()
     def toString(self):

@@ -23,6 +23,11 @@ class Zoologico():
     def getZonas(self):
         return self._zonas
     
+    def getZona(self):
+        if self._zonas:
+            return self._zonas[0]
+        return None
+    
 
     def cantidadTotalAnimales(self):
         cantidadTotalAnimales = 0
